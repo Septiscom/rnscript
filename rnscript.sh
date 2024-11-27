@@ -23,15 +23,11 @@ function show_help {
     echo "  -silent | -s  : Suppresses all output to the console."
     echo "  -verbose | -v : Displays additional information during execution."
     echo "  -help | -h    : Displays this help message."
-    echo
-    echo "Examples:"
-    echo "  ./rnscript.sh . '*.txt'        # Search for .txt files in the current directory."
-    echo "  ./rnscript.sh /var '*.log' -v  # Search for .log files in /var with verbose output."
     exit 0
 }
 
 # Parse arguments
-if [[ "$1" == "-h" || "$1" == "-help" ]]; then
+if [[ "$1" == "-h" || "$1" == "--help" ]]; then
     show_help
 fi
 
@@ -68,3 +64,4 @@ echo "Script ended at $(date)" >> "$LOG_FILE"
 
 # Notify user of log file location
 echo "Log file created: $LOG_FILE"
+

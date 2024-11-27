@@ -51,3 +51,4 @@ search_files $directory $search_pattern $silent $verbose
 if {$verbose == 1} {
     puts "Search completed at: [clock format [clock seconds]]"
 }
+
