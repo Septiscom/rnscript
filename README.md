@@ -74,6 +74,5 @@ Example Usage:
   ```bash
   tclsh --version
   ```
-  ```bash
 - Use `chmod +x rnscript.sh srchscript.tcl` to make the shell script executable.
-  ```
+  
