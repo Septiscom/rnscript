@@ -6,17 +6,18 @@ This repository contains a Bash script and a Tcl script that together allow you 
 
 To use the file search scripts, you need to clone this repository to your local machine.
 
-1.Use the following command to clone the repository:
+1.Use the following command to clone the repository
 ```bash
 git clone https://github.com/Septiscom/rnscript.git
-exit
+```
 2.Make the scripts executable:
 ```bash
 chmod +x rnscript.sh srchscript.tcl
-exit
+```
 3.Ensure Tcl is installed on your system. Check using:
+```bash
 tclsh --version
-
+```
 ## Scripts Overview
 
 ### 1. rnscript.sh
@@ -46,7 +47,7 @@ Example Usage:
 
 2.Search for all .log files in /var/log with verbose output:
       ./rnscript.sh /var/log "*.log" -v
-
+```
 ### 2. srchscript.tcl
 
 A Tcl script that:
@@ -55,7 +56,7 @@ A Tcl script that:
 - Prints the matching file names to the console.
 
 Usage:
-
+```bash
 tclsh srchscript.tcl <directory> <search_pattern> <silent> <verbose>
 
 Example Usage:
@@ -65,11 +66,14 @@ Example Usage:
 
 2.Search with verbose logging enabled:
       tclsh srchscript.tcl /etc "*.conf" 0 1
-
+```
 ## Prerequisites
 
 - **Bash**: The `rnscript.sh` Bash script should run on any Unix-like system that supports Bash.
 - **Tcl**: The `srchscript.tcl` Tcl script requires Tcl to be installed. You can check if Tcl is installed with the command:
   ```bash
   tclsh --version
+  ```
+  ```bash
 - Use `chmod +x rnscript.sh srchscript.tcl` to make the shell script executable.
+  ```
