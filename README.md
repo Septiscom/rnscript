@@ -9,8 +9,11 @@ To use the file search scripts, you need to clone this repository to your local 
 1.Use the following command to clone the repository:
 ```bash
 git clone https://github.com/Septiscom/rnscript.git
+exit
 2.Make the scripts executable:
+```bash
 chmod +x rnscript.sh srchscript.tcl
+exit
 3.Ensure Tcl is installed on your system. Check using:
 tclsh --version
 
