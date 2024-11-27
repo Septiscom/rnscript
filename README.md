@@ -2,6 +2,18 @@
 
 This repository contains a Bash script and a Tcl script that together allow you to search for files in the current directory based on a specified pattern. The results are logged to a specified log file.
 
+## Installation
+
+To use the file search scripts, you need to clone this repository to your local machine.
+
+1.Use the following command to clone the repository:
+```bash
+git clone https://github.com/Septiscom/rnscript.git
+2.Make the scripts executable:
+chmod +x rnscript.sh srchscript.tcl
+3.Ensure Tcl is installed on your system. Check using:
+tclsh --version
+
 ## Scripts Overview
 
 ### 1. rnscript.sh
@@ -10,6 +22,10 @@ A Bash script that:
 - Accepts a directory, file pattern, and optional mode arguments.
 - Logs all actions to a log file with a timestamp.
 - Invokes the `srchscript.tcl` script to search for files matching the provided pattern in the specified directory.
+
+#### Usage:
+```bash
+./rnscript.sh [directory] [pattern] [-silent|-verbose]
 
 
 ### 2. srchscript.tcl
