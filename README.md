@@ -23,10 +23,26 @@ A Bash script that:
 - Logs all actions to a log file with a timestamp.
 - Invokes the `srchscript.tcl` script to search for files matching the provided pattern in the specified directory.
 
-#### Usage:
+Usage:
+
 ```bash
 ./rnscript.sh [directory] [pattern] [-silent|-verbose]
 
+Options:
+
+    directory: Directory to search files in (default: current directory).
+    pattern: File name pattern to search (supports wildcards).
+    -silent | -s: Suppress all output.
+    -verbose | -v: Enable detailed output.
+    -help | -h: Display help.
+
+Example Usage:
+
+1.Search for all .txt files in the current directory:
+      ./rnscript.sh . "*.txt"
+
+2.Search for all .log files in /var/log with verbose output:
+      ./rnscript.sh /var/log "*.log" -v
 
 ### 2. srchscript.tcl
 
@@ -35,6 +51,18 @@ A Tcl script that:
 - Handles optional modes: silent (no output) and verbose (additional logging).
 - Prints the matching file names to the console.
 
+Usage:
+
+tclsh srchscript.tcl <directory> <search_pattern> <silent> <verbose>
+
+Example Usage:
+
+1.Search for .conf files in /etc without suppressing output:
+      tclsh srchscript.tcl /etc "*.conf" 0 0
+
+2.Search with verbose logging enabled:
+      tclsh srchscript.tcl /etc "*.conf" 0 1
+
 ## Prerequisites
 
 - **Bash**: The `rnscript.sh` Bash script should run on any Unix-like system that supports Bash.
@@ -42,4 +70,3 @@ A Tcl script that:
   ```bash
   tclsh --version
 - Use `chmod +x rnscript.sh srchscript.tcl` to make the shell script executable.
-
